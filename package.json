@@ -4,16 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:watch": "./node_modules/babel-cli/bin/babel.js index.js -d dist/ --watch",
+    "build-cli:watch": "./node_modules/webpack/bin/webpack.js --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "babel-polyfill": "^6.13.0",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "ramda": "^0.22.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.14.0"
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.25.0",
+    "json-loader": "^0.5.4",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2"
   }
 }
