@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css?family=Orbitron';
+
+.calculator-container {
+  padding: 5px;
+  border: 1px solid black;
+  width: 200px;
+  height: 230px;
+}
+
+.screen {
+  border: 1px solid black;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.screen p {
+  font-size: 22px;
+  margin: 0;
+  padding: 6px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.touch {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.touch .content {
+  margin-left: 15px;
+  margin-top: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.touch-numbers {
+  display: inline-block;;
+  width: 80%;
+}
+
+.touch-control {
+  display: inline-block;
+  width: 20%;
+  margin-left: -12px;
+}
+
+.touch-numbers .touch {
+  display: inline-block;
+}
+
+.touch-control .touch {
+  display: block;
+}
