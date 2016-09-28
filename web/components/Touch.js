@@ -17,8 +17,8 @@ const handleClick = (props) => {
 }
 
 const Touch = (props) => {
-  const { text } = props
-  return <div className='touch' onClick={() => handleClick(props)}>
+  const { text } = props;
+  return <div className={`touch touch-${text}`} onClick={() => handleClick(props)}>
     <p className='content'>{text}</p>
   </div>
 };
