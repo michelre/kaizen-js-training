@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build:watch": "./node_modules/babel-cli/bin/babel.js index.js -d dist/ --watch",
+    "build": "./node_modules/babel-cli/bin/babel.js index.js -d dist/",
     "build-cli:watch": "./node_modules/webpack/bin/webpack.js --watch",
-    "test": "mocha --require ./web/test/setup.js --compilers js:babel-register ./web/test/**"
+    "build-cli": "./node_modules/webpack/bin/webpack.js",
+    "test": "mocha --require ./web/test/setup.js --compilers js:babel-register ./web/test/**",
+    "postinstall": "npm run build && npm run build-cli",
+    "start": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -33,5 +37,8 @@
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
+  },
+  "engines": {
+    "node": "6.6.0"
   }
 }
