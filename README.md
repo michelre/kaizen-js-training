@@ -7,7 +7,7 @@ Le but du projet est de créer une calculatrice en utilisant uniquement des tech
 - Partager le code sur Github
 - Déployer le code sur la plateforme de votre choix (AWS, Azure, Heroku...)
 
-Retrouvez un exemple ici: 
+Retrouvez un exemple ici: https://kaizen-js-formation.herokuapp.com/
 
 **Pensez à utiliser ES2015**
 
