@@ -21,7 +21,7 @@ export default class Calculator extends React.Component{
   }
   handleEqualClick(){
     const { screenText } = this.state;
-    const [allMatch, op1, op, op2] = /(\d*)(\W*)(\d*)/.exec(screenText);    
+    const [allMatch, op1, op, op2] = /(\d*)(\W*)(\d*)/.exec(screenText);
     api[toStringOperation(op.trim())].apply(null, [op1, op2]).then(({ result }) => {
       this.setState({ screenText: result });
     });

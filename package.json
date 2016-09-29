@@ -6,7 +6,7 @@
   "scripts": {
     "build:watch": "./node_modules/babel-cli/bin/babel.js index.js -d dist/ --watch",
     "build-cli:watch": "./node_modules/webpack/bin/webpack.js --watch",
-    "test": "mocha --compilers js:babel-register ./web/test/**"
+    "test": "mocha --require ./web/test/setup.js --compilers js:babel-register ./web/test/**"
   },
   "author": "",
   "license": "ISC",

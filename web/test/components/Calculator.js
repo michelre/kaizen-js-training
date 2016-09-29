@@ -29,11 +29,13 @@ describe('<Calculator />', () => {
     wrapper.state().should.eql({ screenText: '9 * ' });
   });
   it('should handle a click on equal', () => {
-    const multStub = sinon.spy(api, 'mult');
+    const multStub = sinon.stub(api, 'mult')
+      .returns(new Promise((res, rej) => res({ result: 0 })));
     const wrapper = mount(<Calculator />);
     wrapper.setState({ screenText: '9 * 23' })
     wrapper.find('.touch-=').simulate('click');
-    multStub.should.be.calledWith(9, 23);
+    api.mult.should.be.calledWith('9', '23');
+    api.mult.restore();
   });
   it('should handle a click on the AC button', () => {
     const wrapper = mount(<Calculator />);

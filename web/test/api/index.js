@@ -6,20 +6,17 @@ import $ from 'jquery';
 import { add, sub, mult, div } from '../../api';
 
 describe('API', () => {
-  /*before(() => {
+  beforeEach(() => {
     sinon.stub($, 'get');
   });
-  after(() => {
+  afterEach(() => {
     $.get.restore();
-  });*/
+  });
   it('should call get function from jQuery with the right URL (add)', () => {
-    console.log($);
-    sinon.stub($, 'get');
     add(1, 2);
     $.get.should.be.calledWith('/add/1/2');
-    $.get.restore();
   });
-  /*it('should call get function from jQuery with the right URL (sub)', () => {
+  it('should call get function from jQuery with the right URL (sub)', () => {
     sub(1, 2);
     $.get.should.be.calledWith('/sub/1/2');
   });
@@ -30,5 +27,5 @@ describe('API', () => {
   it('should call get function from jQuery with the right URL (div)', () => {
     div(1, 2);
     $.get.should.be.calledWith('/div/1/2');
-  });*/
+  });
 });
